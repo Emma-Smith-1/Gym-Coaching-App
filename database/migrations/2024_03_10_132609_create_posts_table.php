@@ -14,16 +14,16 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->title();
-            $table->content();
-            $table->creationDate();
-            $table->lastUpdated();
-            $table->category();
-            $table->visibility();
-            $table->likes();
-            $table->comments();
-            $table->media(); 
-            $table->status();
+            $table->string('title');
+            $table->text('content');
+            $table->dateTime('creationDate')->nullable();
+            $table->dateTime('lastUpdated')->nullable();
+            $table->string('category')->nullable();
+            $table->enum('visibility', ['public', 'draft', 'private'])->default('draft');
+            $table->unsignedInteger('likes')->default(0);
+            $table->unsignedInteger('comments')->default(0);
+            $table->string('media')->nullable();
+            $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
         });
     }
 
