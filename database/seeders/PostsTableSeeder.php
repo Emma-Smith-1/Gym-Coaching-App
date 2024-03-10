@@ -12,20 +12,21 @@ class PostsTableSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
-        $post = new Posts;
-        $post->title = "Seeding post";
-        $post->content = "This is a test of getting seeding to work in the posts database";
-        $post->creationDate = Carbon::now();
-        $post->lastUpdated = Carbon::now();
-        $post->category = "Test post";
-        $post->visibility = "public";  // can also be draft or private
-        $post->likes = 12;
-        $post->comments = 3;
-        $post->media = "https://example.com/image.jpg";
-        $post->status = "approved";
-        $post->save();
+        $p = new Posts;
+        $p->title = "Seeding post";
+        $p->content = "This is a test of getting seeding to work in the posts database";
+        $p->creationDate = Carbon::now();
+        $p->lastUpdated = Carbon::now();
+        $p->category = "Test post";
+        $p->visibility = "public";  // can also be draft or private
+        $p->likes = 12;
+        $p->comments = 3;
+        $p->media = "https://example.com/image.jpg";
+        $p->status = "approved";
+        $p->save();
 
+        Posts::factory()->count(10)->create();
     }
 }

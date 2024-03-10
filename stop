@@ -1,0 +1,230 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#5989
+    [34mall[39m: [
+      [34;4mApp\Models\Posts[39;24m {#5991
+        [34mid[39m: [35m1[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mSeeding post[39m",
+        [34mcontent[39m: "[32mThis is a test of getting seeding to work in the posts database[39m",
+        [34mcreationDate[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mlastUpdated[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mcategory[39m: "[32mTest post[39m",
+        [34mvisibility[39m: "[32mpublic[39m",
+        [34mlikes[39m: [35m12[39m,
+        [34mcomments[39m: [35m3[39m,
+        [34mmedia[39m: "[32mhttps://example.com/image.jpg[39m",
+        [34mstatus[39m: "[32mapproved[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#5992
+        [34mid[39m: [35m2[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mAnimi saepe sequi eos provident sed dolor.[39m",
+        [34mcontent[39m: """
+          [32mTotam optio vel incidunt. Nostrum explicabo cupiditate ea nulla consequuntur.[39m\n
+          \n
+          [32mHic sunt atque assumenda natus animi ea reiciendis minima. Dolorem quae aut illo est hic. Adipisci iusto eius iure aut velit ut perspiciatis vel. Et odit cupiditate qui placeat magnam eveniet.[39m\n
+          \n
+          [32mTemporibus et est neque ullam facere earum vel. Voluptate dolor similique dicta nesciunt. Dolor culpa quam odio et corrupti voluptatem. In quod nesciunt alias est vel et.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-04-07 10:49:44[39m",
+        [34mlastUpdated[39m: "[32m2023-08-15 20:24:18[39m",
+        [34mcategory[39m: "[32mTechnology[39m",
+        [34mvisibility[39m: "[32mpublic[39m",
+        [34mlikes[39m: [35m305[39m,
+        [34mcomments[39m: [35m86[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/005533?text=magni[39m",
+        [34mstatus[39m: "[32mapproved[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#5993
+        [34mid[39m: [35m3[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mEst quasi odio rerum ipsam voluptatum ut qui iste.[39m",
+        [34mcontent[39m: """
+          [32mIusto at unde et ipsam reprehenderit. Sit adipisci quia totam sequi est velit similique. Recusandae in odit ad accusamus. Tempora dolore quisquam et quam voluptas.[39m\n
+          \n
+          [32mDolorem vel non et. Facilis et totam et ut adipisci dolor. Amet necessitatibus ut omnis est. Praesentium eos sequi voluptatem aut.[39m\n
+          \n
+          [32mEt autem sed reiciendis tempore quaerat dicta libero distinctio. Rerum enim animi et aut doloribus ipsam. Enim quidem nihil harum dolores amet reprehenderit.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-12-15 05:34:49[39m",
+        [34mlastUpdated[39m: "[32m2023-11-07 22:12:42[39m",
+        [34mcategory[39m: "[32mTravel[39m",
+        [34mvisibility[39m: "[32mprivate[39m",
+        [34mlikes[39m: [35m432[39m,
+        [34mcomments[39m: [35m58[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/002288?text=fugit[39m",
+        [34mstatus[39m: "[32mrejected[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#5994
+        [34mid[39m: [35m4[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mVel explicabo magni sed possimus.[39m",
+        [34mcontent[39m: """
+          [32mAut quia illum omnis consequatur. Et dicta et quia cumque eveniet cupiditate quibusdam. Ullam aut perferendis tempore cupiditate.[39m\n
+          \n
+          [32mNeque beatae amet ad dolorem itaque quisquam quod. Tempore placeat voluptatem rerum ut dolores nihil assumenda. Consequatur delectus qui fuga quidem fugiat quidem ut distinctio.[39m\n
+          \n
+          [32mFuga sint rerum itaque quod quas. Voluptas voluptatum blanditiis ipsum non eum. Ut dolorum minus tempore facere ducimus enim. Sed delectus quam id cumque nulla est reprehenderit.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-03-25 08:42:56[39m",
+        [34mlastUpdated[39m: "[32m2023-08-29 06:20:46[39m",
+        [34mcategory[39m: "[32mTest post[39m",
+        [34mvisibility[39m: "[32mdraft[39m",
+        [34mlikes[39m: [35m434[39m,
+        [34mcomments[39m: [35m67[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/00aa55?text=explicabo[39m",
+        [34mstatus[39m: "[32mrejected[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#5995
+        [34mid[39m: [35m5[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mPerspiciatis voluptatem odit autem et.[39m",
+        [34mcontent[39m: """
+          [32mTempore in alias occaecati corporis. Est accusantium reprehenderit voluptatem eveniet illum eos.[39m\n
+          \n
+          [32mModi veniam minima ut. Deleniti maxime qui deserunt necessitatibus ratione. Voluptatum autem illum sunt et ut.[39m\n
+          \n
+          [32mRerum et id dolores enim debitis at. Occaecati eum tempore dolore qui.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-11-03 16:24:45[39m",
+        [34mlastUpdated[39m: "[32m2024-03-01 18:22:10[39m",
+        [34mcategory[39m: "[32mTravel[39m",
+        [34mvisibility[39m: "[32mprivate[39m",
+        [34mlikes[39m: [35m77[39m,
+        [34mcomments[39m: [35m94[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/00ee88?text=ratione[39m",
+        [34mstatus[39m: "[32mrejected[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#5996
+        [34mid[39m: [35m6[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mSapiente fuga ratione libero pariatur vitae impedit magnam.[39m",
+        [34mcontent[39m: """
+          [32mAut facilis nemo voluptatem reiciendis sit aut. Est alias qui dolores ea et. Tenetur deserunt eius id et libero culpa. Eos quae consequatur vel et tenetur non est.[39m\n
+          \n
+          [32mArchitecto ad asperiores fugit. A a dolorem accusamus modi perferendis laudantium consequatur. Ut ab dolorem ex necessitatibus quasi.[39m\n
+          \n
+          [32mCorporis sunt sed fugiat eum suscipit labore quia. Eum impedit inventore ad distinctio nisi voluptatum totam et. Voluptas quod vel mollitia impedit rerum ad hic. Repellat et et quia.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-09-08 20:22:54[39m",
+        [34mlastUpdated[39m: "[32m2024-02-12 03:51:58[39m",
+        [34mcategory[39m: "[32mFood[39m",
+        [34mvisibility[39m: "[32mprivate[39m",
+        [34mlikes[39m: [35m10[39m,
+        [34mcomments[39m: [35m89[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/00aa55?text=qui[39m",
+        [34mstatus[39m: "[32mapproved[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#5997
+        [34mid[39m: [35m7[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mEst veniam porro eum aut explicabo eos tempore.[39m",
+        [34mcontent[39m: """
+          [32mAnimi eveniet nobis minus voluptatem neque eveniet. Numquam vel laudantium ex et deleniti magnam nemo. Accusantium doloribus ducimus enim vel facilis molestiae ex.[39m\n
+          \n
+          [32mNostrum rerum quasi molestiae. Quia dolore et deleniti. Ullam quae nesciunt tempore similique sint odio labore. Omnis sit deserunt repudiandae.[39m\n
+          \n
+          [32mEt impedit excepturi sit et accusantium. Et modi vel error. Velit quidem dolore minima corrupti sit vel et.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-05-29 20:31:06[39m",
+        [34mlastUpdated[39m: "[32m2023-12-28 16:55:13[39m",
+        [34mcategory[39m: "[32mTest post[39m",
+        [34mvisibility[39m: "[32mprivate[39m",
+        [34mlikes[39m: [35m476[39m,
+        [34mcomments[39m: [35m92[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/008899?text=et[39m",
+        [34mstatus[39m: "[32mapproved[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#5998
+        [34mid[39m: [35m8[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mNam impedit hic sint maiores nihil dolorum quasi est.[39m",
+        [34mcontent[39m: """
+          [32mNecessitatibus qui molestias facere incidunt dolorem eum laudantium. Dolor velit facere delectus hic. Quia officia mollitia enim quis quia facilis ut ipsam. Numquam aut ea possimus voluptatem.[39m\n
+          \n
+          [32mRem suscipit quae hic odit voluptatem mollitia. Sunt et veritatis velit quia voluptas amet. Est eos dolor alias est ad. Deserunt tempora et hic dolor consequatur atque itaque.[39m\n
+          \n
+          [32mAut repellendus quod commodi sit culpa et suscipit. Ipsa delectus quisquam praesentium ut. Nostrum et aut quis nisi.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-12-11 14:31:02[39m",
+        [34mlastUpdated[39m: "[32m2024-03-09 05:56:47[39m",
+        [34mcategory[39m: "[32mTechnology[39m",
+        [34mvisibility[39m: "[32mpublic[39m",
+        [34mlikes[39m: [35m365[39m,
+        [34mcomments[39m: [35m50[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/006600?text=commodi[39m",
+        [34mstatus[39m: "[32mapproved[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#5999
+        [34mid[39m: [35m9[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mNulla in repudiandae dolorem ipsa.[39m",
+        [34mcontent[39m: """
+          [32mNecessitatibus voluptatum a distinctio eaque. Animi quaerat incidunt ipsum perspiciatis. Eos iusto et accusamus velit.[39m\n
+          \n
+          [32mVitae consequuntur iure exercitationem rem autem sapiente. Officiis explicabo voluptas provident maiores. Dolorem consequatur explicabo doloribus quo totam.[39m\n
+          \n
+          [32mMagni id molestias sint perferendis praesentium sit dolor. Est aliquam consequuntur voluptas blanditiis voluptate porro delectus. Soluta ea quod corrupti iste doloribus enim quas. Fugiat rerum amet rerum.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-09-21 10:58:19[39m",
+        [34mlastUpdated[39m: "[32m2023-11-22 17:35:37[39m",
+        [34mcategory[39m: "[32mTravel[39m",
+        [34mvisibility[39m: "[32mprivate[39m",
+        [34mlikes[39m: [35m275[39m,
+        [34mcomments[39m: [35m9[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/000044?text=veritatis[39m",
+        [34mstatus[39m: "[32mapproved[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#6000
+        [34mid[39m: [35m10[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mRerum quia beatae reiciendis quibusdam autem.[39m",
+        [34mcontent[39m: """
+          [32mQui dolor eaque facilis est voluptas aut voluptas sit. Et et sunt hic sed ipsam quidem ad. Aut nulla est omnis dolore tempora suscipit enim.[39m\n
+          \n
+          [32mVoluptate qui nemo qui aperiam ea voluptatum. Est laboriosam rerum rem provident totam magnam.[39m\n
+          \n
+          [32mNeque rem fugit quam quasi. Dolor aliquid architecto aut illum rerum qui nulla. Eos ut dolor voluptas minima beatae voluptas nulla.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-06-18 20:10:05[39m",
+        [34mlastUpdated[39m: "[32m2023-10-06 18:08:34[39m",
+        [34mcategory[39m: "[32mFood[39m",
+        [34mvisibility[39m: "[32mpublic[39m",
+        [34mlikes[39m: [35m103[39m,
+        [34mcomments[39m: [35m84[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/00aa22?text=voluptatem[39m",
+        [34mstatus[39m: "[32mapproved[39m",
+      },
+      [34;4mApp\Models\Posts[39;24m {#6001
+        [34mid[39m: [35m11[39m,
+        [34mcreated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mupdated_at[39m: "[32m2024-03-10 16:28:00[39m",
+        [34mtitle[39m: "[32mDolores illum quo et qui occaecati dicta iure.[39m",
+        [34mcontent[39m: """
+          [32mDelectus doloribus officia ipsam vel. Et magni est eligendi rem numquam esse quibusdam. Eum tenetur ipsum reprehenderit quos quam ex. Quia distinctio aut voluptatibus ab.[39m\n
+          \n
+          [32mIusto laborum nihil omnis aut. Aut voluptatem non modi occaecati eligendi nam aperiam. Quia quasi distinctio qui qui dolorem aut repellat.[39m\n
+          \n
+          [32mTemporibus nulla omnis qui nihil delectus quidem itaque earum. Soluta aliquid voluptas unde ut ullam. Sequi veritatis at dolor accusantium. Recusandae similique velit quos animi atque. Consequatur ducimus iusto a.[39m
+          """,
+        [34mcreationDate[39m: "[32m2023-11-25 07:37:17[39m",
+        [34mlastUpdated[39m: "[32m2023-10-13 20:47:15[39m",
+        [34mcategory[39m: [36mnull[39m,
+        [34mvisibility[39m: "[32mdraft[39m",
+        [34mlikes[39m: [35m3[39m,
+        [34mcomments[39m: [35m56[39m,
+        [34mmedia[39m: "[32mhttps://via.placeholder.com/640x480.png/00bb55?text=praesentium[39m",
+        [34mstatus[39m: "[32mpending[39m",
+      },
+    ],
+  }
+
