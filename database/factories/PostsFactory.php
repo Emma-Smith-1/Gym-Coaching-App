@@ -20,7 +20,7 @@ class PostsFactory extends Factory
     {
         return [
             "title" => fake()->sentence,
-            "content" => fake()->paragraphs(3, true),
+            "content" => fake()->paragraphs(3, true, "en_GB"),
             "creationDate" => fake()->dateTimeBetween("-1 year", "now"),
             "lastUpdated" => fake()->dateTimeBetween("-1 year", "now"),
             "category" => fake()->randomElement(["Test post", "Technology", "Travel", "Food", null]),
