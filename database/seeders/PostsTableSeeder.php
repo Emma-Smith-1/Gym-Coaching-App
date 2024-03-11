@@ -17,14 +17,15 @@ class PostsTableSeeder extends Seeder
         $p = new Posts;
         $p->title = "Seeding post";
         $p->content = "This is a test of getting seeding to work in the posts database";
-        $p->creationDate = Carbon::now();
-        $p->lastUpdated = Carbon::now();
+        $p->creation_date = Carbon::now();
+        $p->last_updated = Carbon::now();
         $p->category = "Test post";
         $p->visibility = "public";  // can also be draft or private
         $p->likes = 12;
         $p->comments = 3;
         $p->media = "https://example.com/image.jpg";
         $p->status = "approved";
+        $p->user_id = 1;
         $p->save();
 
         Posts::factory()->count(10)->create();

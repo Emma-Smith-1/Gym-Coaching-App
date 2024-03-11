@@ -16,14 +16,18 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title');
             $table->text('content');
-            $table->dateTime('creationDate')->nullable();
-            $table->dateTime('lastUpdated')->nullable();
+            $table->dateTime('creation_ate')->nullable();
+            $table->dateTime('last_updated')->nullable();
             $table->string('category')->nullable();
             $table->enum('visibility', ['public', 'draft', 'private'])->default('draft');
             $table->unsignedInteger('likes')->default(0);
             $table->unsignedInteger('comments')->default(0);
             $table->string('media')->nullable();
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
+            $table->bigInteger('user_id')->unsigned();
+
+            $table->foreign('user_id')->references('id')->on('user')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

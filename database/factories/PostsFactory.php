@@ -21,14 +21,15 @@ class PostsFactory extends Factory
         return [
             "title" => fake()->realText($maxNbChars = 40, $indexSize = 2),
             "content" => fake()->realText($maxNbChars = 400, $indexSize = 2),
-            "creationDate" => fake()->dateTimeBetween("-1 year", "now"),
-            "lastUpdated" => fake()->dateTimeBetween("-1 year", "now"),
+            "creation_date" => fake()->dateTimeBetween("-1 year", "now"),
+            "last_updated" => fake()->dateTimeBetween("-1 year", "now"),
             "category" => fake()->randomElement(["Test post", "Technology", "Travel", "Food", null]),
             "visibility" => fake()->randomElement(["public", "draft", "private"]),
             "likes" => fake()->numberBetween(0, 500),
             "comments" => fake()->numberBetween(0, 100),
             "media" => fake()->imageUrl(),
             "status" => fake()->randomElement(["pending", "approved", "rejected"]),
+            "user_id" => 1,
         ];
     }
 }
