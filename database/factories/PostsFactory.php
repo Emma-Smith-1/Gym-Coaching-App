@@ -19,8 +19,8 @@ class PostsFactory extends Factory
     public function definition(): array
     {
         return [
-            "title" => fake()->sentence,
-            "content" => fake()->paragraphs(3, true, "en_GB"),
+            "title" => fake()->realText($maxNbChars = 40, $indexSize = 2),
+            "content" => fake()->realText($maxNbChars = 400, $indexSize = 2),
             "creationDate" => fake()->dateTimeBetween("-1 year", "now"),
             "lastUpdated" => fake()->dateTimeBetween("-1 year", "now"),
             "category" => fake()->randomElement(["Test post", "Technology", "Travel", "Food", null]),
