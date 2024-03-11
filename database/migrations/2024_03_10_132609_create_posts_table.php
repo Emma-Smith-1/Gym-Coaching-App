@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('title');
             $table->text('content');
             $table->dateTime('creation_date')->nullable();
@@ -27,7 +26,10 @@ return new class extends Migration
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->bigInteger('user_id')->unsigned();
 
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onDelete('cascade')->onUpdate('cascade');
 
+            $table->timestamps();
         });
     }
 
