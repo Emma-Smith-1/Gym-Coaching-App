@@ -23,7 +23,7 @@ class CommentFactory extends Factory
             "date_posted" => fake()->dateTimeBetween("-1 year", "now"),
             "likes" => fake()->numberBetween(0, 500),
             "user_id" => 1,
-            "comment_id"=>1,
+            "post_id"=>1,
         ];
     }
 }

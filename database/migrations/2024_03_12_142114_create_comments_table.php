@@ -15,10 +15,13 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('comment_id')->unsigned();
+            $table->bigInteger('post_id')->unsigned();
             $table->text('content');
             $table->unsignedInteger('likes')->default(0);
             $table->dateTime('date_posted')->nullable();
+
+            $table->foreign('post_id')->references('id')->on('posts')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

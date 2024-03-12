@@ -16,7 +16,7 @@ class CommentTableSeeder extends Seeder
     {
         $c = new Comment;
         $c->user_id = 1;
-        $c->comment_id = 1;
+        $c->post_id = 1;
         $c->content = "test comment";
         $c->date_posted  = Carbon::now();
         $c->likes = 5;
