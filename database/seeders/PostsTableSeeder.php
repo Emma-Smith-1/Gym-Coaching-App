@@ -20,7 +20,7 @@ class PostsTableSeeder extends Seeder
         $p->creation_date = Carbon::now();
         $p->last_updated = Carbon::now();
         $p->category = "Test post";
-        $p->visibility = "public";  // can also be draft or private
+        $p->visibility = "public";
         $p->likes = 12;
         $p->comments = 3;
         $p->media = "https://example.com/image.jpg";

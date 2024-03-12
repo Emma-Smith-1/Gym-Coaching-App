@@ -19,6 +19,7 @@ class CommentTableSeeder extends Seeder
         $c->post_id = 1;
         $c->content = "test comment";
         $c->date_posted  = Carbon::now();
+        $c->visibility = "public";
         $c->likes = 5;
         $c->save();
 

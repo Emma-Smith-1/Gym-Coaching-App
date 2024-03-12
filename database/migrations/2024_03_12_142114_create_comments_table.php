@@ -19,8 +19,12 @@ return new class extends Migration
             $table->text('content');
             $table->unsignedInteger('likes')->default(0);
             $table->dateTime('date_posted')->nullable();
+            $table->enum('visibility', ['public', 'draft', 'private'])->default('draft');
 
             $table->foreign('post_id')->references('id')->on('posts')
+                ->onDelete('cascade')->onUpdate('cascade');
+
+            $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }

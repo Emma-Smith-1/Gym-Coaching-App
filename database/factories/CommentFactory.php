@@ -22,6 +22,7 @@ class CommentFactory extends Factory
             "content" => fake()->realText($maxNbChars = 400, $indexSize = 2),
             "date_posted" => fake()->dateTimeBetween("-1 year", "now"),
             "likes" => fake()->numberBetween(0, 500),
+            "visibility" => fake()->randomElement(["public", "draft", "private"]),
             "user_id" => 1,
             "post_id"=>1,
         ];
