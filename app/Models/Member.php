@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Posts extends Model
+class Member extends Model
 {
     use HasFactory;
 
-    public function coaches()
+    public function user()
     {
-        return $this->belongsTo(Coach::class);
+        return $this->belongsTo(User::class);
     }
 
     public function comments()
@@ -22,6 +22,11 @@ class Posts extends Model
     public function notifications()
     {
         return $this->hasMany(Notification::class);
+    }
+
+    public function coaches()
+    {
+        return $this->belongsToMany(Coach::class);
     }
 
 }

@@ -13,9 +13,15 @@ class Comment extends Model
     {
         return $this->belongsTo(Posts::class);
     }
-
-    public function user()
+    
+    public function coaches()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Coach::class);
+    }
+
+    public function members()
+    {
+        return $this->belongsTo(Member::class);
     }
 }
+

@@ -25,7 +25,7 @@ class UserFactory extends Factory
     {
         $username = fake()->name();
         $name = fake()->name();
-        $user_type = \Faker\Factory::create()->randomElement(['coach', 'player']);
+        $user_type = \Faker\Factory::create()->randomElement(['coach', 'member']);
         $email = fake()->unique()->safeEmail();
         $email_verified_at = now();
         $password = static::$password ??= Hash::make('password');

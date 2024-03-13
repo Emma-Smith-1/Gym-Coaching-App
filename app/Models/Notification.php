@@ -9,9 +9,14 @@ class Notification extends Model
 {
     use HasFactory;
 
-    public function user()
+    public function coaches()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Coach::class);
+    }
+
+    public function members()
+    {
+        return $this->belongsTo(Member::class);
     }
 
     public function posts()

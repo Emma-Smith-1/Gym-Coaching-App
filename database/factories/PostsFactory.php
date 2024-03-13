@@ -29,7 +29,7 @@ class PostsFactory extends Factory
             "comments" => fake()->numberBetween(0, 100),
             "media" => fake()->imageUrl(),
             "status" => fake()->randomElement(["pending", "approved", "rejected"]),
-            "user_id" => random_int(\DB::table('users')->min('id'), \DB::table('users')->max('id')),
+            "coach_id" => random_int(\DB::table('coaches')->min('id'), \DB::table('coaches')->max('id')),
         ];
     }
 }

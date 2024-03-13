@@ -3,13 +3,13 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Coach;
+use App\Models\Member;
 use Carbon\Carbon;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Coach>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Member>
  */
-class CoachFactory extends Factory
+class MemberFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -21,13 +21,13 @@ class CoachFactory extends Factory
         $user_id = random_int(\DB::table('users')->min('id'), \DB::table('users')->max('id'));
         $name = \DB::table('users')->where('id', $user_id)->value('name');
         $username = \DB::table('users')->where('id', $user_id)->value('username');
-        $years_coaching = random_int(0, 40);
+        $years_member = random_int(0, 10);
 
         return [
             'user_id' => $user_id,
             'name' => $name,
             'username' => $username,
-            'years_coaching' => $years_coaching,
+            'years_member' => $years_member,
         ];
     }
 }

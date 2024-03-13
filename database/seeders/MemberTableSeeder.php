@@ -2,18 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\Coach;
+use App\Models\Member;
 use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CoachTableSeeder extends Seeder
+class MemberTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run()
     {
-        Coach::factory()->count(5)->create();
+        Member::factory()->count(95)->create();
     }
 }
