@@ -21,6 +21,7 @@ class NotificationTableSeeder extends Seeder
         $n->notification_text = "commented on your post";
         $n->notification_time = Carbon::now();
         $n->been_read = "unread";
+        $n->username = "bob123";
         $n->save();
 
         Notification::factory()->count(12)->create();

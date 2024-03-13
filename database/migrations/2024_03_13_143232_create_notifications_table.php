@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('notification_text');
             $table->dateTime('notification_time')->nullable();
             $table->enum('been_read', ['read', 'unread'])->default('unread');
+            $table->string('username');
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
