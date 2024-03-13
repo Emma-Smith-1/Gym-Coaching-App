@@ -28,6 +28,6 @@ class PostsTableSeeder extends Seeder
         $p->user_id = 1;
         $p->save();
 
-        Posts::factory()->count(10)->create();
+        Posts::factory()->count(15)->create();
     }
 }

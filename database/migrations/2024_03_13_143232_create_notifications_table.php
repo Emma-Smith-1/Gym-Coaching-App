@@ -11,22 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('notifications', function (Blueprint $table) {
             $table->id();
+
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('post_id')->unsigned();
-            $table->text('content');
-            $table->unsignedInteger('likes')->default(0);
-            $table->dateTime('date_posted')->nullable();
-            $table->enum('visibility', ['public', 'draft', 'private'])->default('draft');
-
-            $table->foreign('post_id')->references('id')->on('posts')
-                ->onDelete('cascade')->onUpdate('cascade');
+            $table->enum('notification_type', ['like', 'comment']);
+            $table->string('notification_text');
+            $table->dateTime('notification_time')->nullable();
+            $table->enum('been_read', ['read', 'unread'])->default('unread');
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
 
-                $table->timestamps();
+            $table->foreign('post_id')->references('id')->on('posts')
+                ->onDelete('cascade')->onUpdate('cascade');
+            
+            $table->timestamps();
         });
     }
 
@@ -35,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('notifications');
     }
 };
