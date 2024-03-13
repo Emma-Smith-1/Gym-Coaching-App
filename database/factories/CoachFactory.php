@@ -22,7 +22,7 @@ class CoachFactory extends Factory
         $name = \DB::table('users')->where('id', $user_id)->value('name');
         $username = \DB::table('users')->where('id', $user_id)->value('username');
         $years_coaching = random_int(0, 40);
-
+        
         return [
             'user_id' => $user_id,
             'name' => $name,

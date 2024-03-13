@@ -3,6 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Coach;
+use App\Models\Member;
+use Carbon\Carbon;
 
 return new class extends Migration
 {
@@ -11,7 +14,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('member_coach', function (Blueprint $table) {
+        Schema::create('coach_member', function (Blueprint $table) {
             $table->primary(['member_id', 'coach_id']);
             $table->bigInteger('member_id')->unsigned();
             $table->bigInteger('coach_id')->unsigned();
