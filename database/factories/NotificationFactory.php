@@ -27,7 +27,7 @@ class NotificationFactory extends Factory
      $notification_text = \Faker\Factory::create()->realText($maxNbChars = 20);
      $notification_time = \Faker\Factory::create()->dateTimeBetween("-1 year", "now")->format('Y-m-d H:i:s');
      $been_read = \Faker\Factory::create()->randomElement(["read", "unread"]);
-     $username = \DB::table('users')->where('id', $user_id)->value('name');
+     $username = \DB::table('users')->where('id', $user_id)->value('username');
 
         return [
             "user_id" => $user_id,

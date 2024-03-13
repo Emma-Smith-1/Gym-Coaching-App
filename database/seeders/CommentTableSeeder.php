@@ -14,15 +14,6 @@ class CommentTableSeeder extends Seeder
      */
     public function run()
     {
-        $c = new Comment;
-        $c->user_id = 1;
-        $c->post_id = 1;
-        $c->content = "test comment";
-        $c->date_posted  = Carbon::now();
-        $c->visibility = "public";
-        $c->likes = 5;
-        $c->save();
-
         Comment::factory()->count(4)->create();
     }
 }

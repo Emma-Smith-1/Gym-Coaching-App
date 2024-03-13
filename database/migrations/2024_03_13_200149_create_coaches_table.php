@@ -11,22 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('notifications', function (Blueprint $table) {
+        Schema::create('coaches', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('post_id')->unsigned();
-            $table->enum('notification_type', ['like', 'comment']);
-            $table->string('notification_text');
-            $table->dateTime('notification_time')->nullable();
-            $table->enum('been_read', ['read', 'unread'])->default('unread');
+            $table->string('name');
             $table->string('username');
+            $table->integer('years_coaching')->default(0);
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
 
-            $table->foreign('post_id')->references('id')->on('posts')
-                ->onDelete('cascade')->onUpdate('cascade');
-            
             $table->timestamps();
         });
     }
@@ -36,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('notifications');
+        Schema::dropIfExists('coaches');
     }
 };
