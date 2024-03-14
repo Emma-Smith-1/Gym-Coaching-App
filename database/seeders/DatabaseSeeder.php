@@ -24,8 +24,8 @@ class DatabaseSeeder extends Seeder
          $this->call(MemberTableSeeder::class);
          $this->call(PostTableSeeder::class);
          $this->call(CommentTableSeeder::class);
-         $this->call(NotificationTableSeeder::class);
          $this->call(ReplyTableSeeder::class);
+         $this->call(NotificationTableSeeder::class);
          $this->call(UserProfileTableSeeder::class);
 
     }

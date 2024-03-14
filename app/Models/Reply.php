@@ -19,4 +19,9 @@ class Reply extends Model
         return $this->belongsTo(Comment::class);
     }
 
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
 }

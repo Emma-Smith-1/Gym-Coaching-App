@@ -29,4 +29,9 @@ class Notification extends Model
         return $this->belongsTo(Comment::class);
     }
 
+    public function replies()
+    {
+        return $this->belongsTo(Reply::class);
+    }
+
 }
