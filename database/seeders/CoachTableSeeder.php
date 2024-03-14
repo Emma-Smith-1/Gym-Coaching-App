@@ -24,7 +24,6 @@ class CoachTableSeeder extends Seeder
                 $coach->members()->attach($member_to_add);
             } else {
                 \Illuminate\Support\Facades\Log::info("Coach was not attached to any member. Generated member ID $member_to_add does not exist.");
-        
             }
         });
     }
