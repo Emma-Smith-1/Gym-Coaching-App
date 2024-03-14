@@ -22,7 +22,7 @@ class PostFactory extends Factory
         $last_updated = \Faker\Factory::create()->dateTimeBetween("-1 year", "now");
         $category = \Faker\Factory::create()->randomElement(["General", "Arm Workouts", "Leg Workouts", "HIIT"]);
         $visibility = \Faker\Factory::create()->randomElement(["public", "draft", "private"]);
-        $likes = random_int(0, 100);
+        $likes = random_int(0, \DB::table('users')->max('id'));
         $comments = random_int(0, 50);
         $media = \Faker\Factory::create()->imageUrl();
         $status = \Faker\Factory::create()->randomElement(["pending", "approved", "rejected"]);

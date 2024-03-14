@@ -19,8 +19,8 @@ class ReplyFactory extends Factory
         $coach_id =  random_int(\DB::table('coaches')->min('id'), \DB::table('coaches')->max('id'));
         $comment_id = random_int(\DB::table('comments')->min('id'), \DB::table('comments')->max('id'));
         $coach_name = \DB::table('coaches')->where('id', $coach_id)->value('name');
-        $content = \Faker\Factory::create()->realText($maxNbChars =  50);
-        $likes = random_int(0, 50);
+        $content = \Faker\Factory::create()->realText($maxNbChars =  100);
+        $likes = random_int(0, \DB::table('users')->max('id'));
         $date_posted = \Faker\Factory::create()->dateTimeBetween("-1 year", "now");
         $visibility = \Faker\Factory::create()->randomElement(['public', 'draft', 'private']);
 
