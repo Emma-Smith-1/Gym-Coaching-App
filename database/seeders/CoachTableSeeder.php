@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Coach;
-use App\Models\Member;
-use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 

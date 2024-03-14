@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Comment;
-use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
