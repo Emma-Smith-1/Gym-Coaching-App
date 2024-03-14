@@ -14,8 +14,13 @@ class MemberTableSeeder extends Seeder
     public function run()
     {
         Member::factory()->count(95)->create()->each(function ($member) {
-            $coaches_to_add = random_int(\DB::table('coaches')->min('id'), \DB::table('coaches')->max('id'));
-            $member->coaches()->attach($coaches_to_add);
+            $coach_to_add = random_int(\DB::table('coaches')->min('id'), \DB::table('coaches')->max('id'));
+
+            if (\DB::table('coaches')->where('id', $coach_to_add)->exists()) {
+                $member->coaches()->attach($coach_to_add);
+            } else {
+                \Illuminate\Support\Facades\Log::info("Member not attached to any coach. Coach $coach_to_add does not exist.");
+            }
         });
     }
 }
