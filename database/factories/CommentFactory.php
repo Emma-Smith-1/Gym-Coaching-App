@@ -20,7 +20,7 @@ class CommentFactory extends Factory
     {
         $content = \Faker\Factory::create()->realText($maxNbChars = 400);
         $date_posted = \Faker\Factory::create()->dateTimeBetween("-1 year", "now");
-        $likes = random_int(0, 500);
+        $likes = random_int(0, 100);
         $visibility = \Faker\Factory::create()->randomElement(["public", "draft", "private"]);
         $user_id = random_int(\DB::table('users')->min('id'), \DB::table('users')->max('id'));
         $post_id = random_int(\DB::table('posts')->min('id'), \DB::table('posts')->max('id'));

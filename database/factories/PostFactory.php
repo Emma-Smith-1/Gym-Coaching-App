@@ -22,10 +22,10 @@ class PostFactory extends Factory
         $content = \Faker\Factory::create()->realText($maxNbChars = 400);
         $creation_date = \Faker\Factory::create()->dateTimeBetween("-1 year", "now");
         $last_updated = \Faker\Factory::create()->dateTimeBetween("-1 year", "now");
-        $category = \Faker\Factory::create()->randomElement(["General", "Arm Workouts", "Leg Workouts", "HIIT", null]);
+        $category = \Faker\Factory::create()->randomElement(["General", "Arm Workouts", "Leg Workouts", "HIIT"]);
         $visibility = \Faker\Factory::create()->randomElement(["public", "draft", "private"]);
-        $likes = random_int(0, 500);
-        $comments = random_int(0, 100);
+        $likes = random_int(0, 100);
+        $comments = random_int(0, 50);
         $media = \Faker\Factory::create()->imageUrl();
         $status = \Faker\Factory::create()->randomElement(["pending", "approved", "rejected"]);
         $coach_id = random_int(\DB::table('coaches')->min('id'), \DB::table('coaches')->max('id'));

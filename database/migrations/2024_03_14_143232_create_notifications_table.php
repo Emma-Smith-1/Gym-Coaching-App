@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('post_id')->unsigned();
-            $table->bigInteger('comment_id')->unsigned();
+            $table->bigInteger('post_id')->unsigned()->nullable();
+            $table->bigInteger('comment_id')->unsigned()->nullable();
             $table->enum('notification_type', ['like', 'comment', 'reply']);
             $table->string('notification_text');
             $table->dateTime('notification_time')->nullable();
