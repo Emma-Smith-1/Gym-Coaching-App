@@ -21,10 +21,10 @@ class ReplyFactory extends Factory
         $coach_id =  random_int(\DB::table('coaches')->min('id'), \DB::table('coaches')->max('id'));
         $comment_id = random_int(\DB::table('comments')->min('id'), \DB::table('comments')->max('id'));
         $coach_name = \DB::table('coaches')->where('id', $coach_id)->value('name');
-        $content = fake()->realText($maxNbChars =  50);
-        $likes = fake()->numberBetween(0, 50);
-        $date_posted = fake()->dateTimeBetween("-1 year", "now");
-        $visibility = fake()->randomElement(['public', 'draft', 'private']);
+        $content = \Faker\Factory::create()->realText($maxNbChars =  50);
+        $likes = random_int(0, 50);
+        $date_posted = \Faker\Factory::create()->dateTimeBetween("-1 year", "now");
+        $visibility = \Faker\Factory::create()->randomElement(['public', 'draft', 'private']);
 
         return [
             'coach_id' => $coach_id,

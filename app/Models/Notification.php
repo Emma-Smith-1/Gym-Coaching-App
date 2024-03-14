@@ -21,7 +21,7 @@ class Notification extends Model
 
     public function posts()
     {
-        return $this->belongsTo(Posts::class);
+        return $this->belongsTo(Post::class);
     }
 
     public function comments()

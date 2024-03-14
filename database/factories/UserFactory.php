@@ -23,10 +23,10 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
-        $username = fake()->name();
-        $name = fake()->name();
+        $username = \Faker\Factory::create()->name();
+        $name = \Faker\Factory::create()->name();
         $user_type = \Faker\Factory::create()->randomElement(['coach', 'member']);
-        $email = fake()->unique()->safeEmail();
+        $email = \Faker\Factory::create()->unique()->safeEmail();
         $email_verified_at = now();
         $password = static::$password ??= Hash::make('password');
         $remember_token = Str::random(10);

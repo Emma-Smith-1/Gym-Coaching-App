@@ -18,13 +18,20 @@ class CommentFactory extends Factory
      */
     public function definition(): array
     {
+        $content = \Faker\Factory::create()->realText($maxNbChars = 400, $indexSize = 2);
+        $date_posted = \Faker\Factory::create()->dateTimeBetween("-1 year", "now");
+        $likes = random_int(0, 500);
+        $visibility = \Faker\Factory::create()->randomElement(["public", "draft", "private"]);
+        $user_id = random_int(\DB::table('users')->min('id'), \DB::table('users')->max('id'));
+        $post_id = random_int(\DB::table('posts')->min('id'), \DB::table('posts')->max('id'));
+
         return [
-            "content" => fake()->realText($maxNbChars = 400, $indexSize = 2),
-            "date_posted" => fake()->dateTimeBetween("-1 year", "now"),
-            "likes" => fake()->numberBetween(0, 500),
-            "visibility" => fake()->randomElement(["public", "draft", "private"]),
-            "user_id" => random_int(\DB::table('users')->min('id'), \DB::table('users')->max('id')),
-            "post_id"=> random_int(\DB::table('posts')->min('id'), \DB::table('posts')->max('id')),
+            "content" => $content,
+            "date_posted" => $date_posted,
+            "likes" => $likes,
+            "visibility" => $visibility,
+            "user_id" => $user_id,
+            "post_id"=> $post_id,
         ];
     }
 }
