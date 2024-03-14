@@ -18,7 +18,7 @@ class CommentFactory extends Factory
      */
     public function definition(): array
     {
-        $content = \Faker\Factory::create()->realText($maxNbChars = 400, $indexSize = 2);
+        $content = \Faker\Factory::create()->realText($maxNbChars = 400);
         $date_posted = \Faker\Factory::create()->dateTimeBetween("-1 year", "now");
         $likes = random_int(0, 500);
         $visibility = \Faker\Factory::create()->randomElement(["public", "draft", "private"]);
