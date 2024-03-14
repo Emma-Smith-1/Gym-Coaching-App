@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('post_id')->unsigned();
-            $table->enum('notification_type', ['like', 'comment']);
+            $table->bigInteger('comment_id')->unsigned();
+            $table->enum('notification_type', ['like', 'comment', 'reply']);
             $table->string('notification_text');
             $table->dateTime('notification_time')->nullable();
             $table->enum('been_read', ['read', 'unread'])->default('unread');
@@ -25,6 +26,9 @@ return new class extends Migration
                 ->onDelete('cascade')->onUpdate('cascade');
 
             $table->foreign('post_id')->references('id')->on('posts')
+                ->onDelete('cascade')->onUpdate('cascade');
+
+            $table->foreign('comment_id')->references('id')->on('comments')
                 ->onDelete('cascade')->onUpdate('cascade');
             
             $table->timestamps();

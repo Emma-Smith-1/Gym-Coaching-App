@@ -34,4 +34,9 @@ class Coach extends Model
         return $this->belongsToMany(Member::class);
     }
 
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
 }

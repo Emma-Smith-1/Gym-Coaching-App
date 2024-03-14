@@ -22,6 +22,7 @@ class NotificationFactory extends Factory
         
      $user_id = random_int(\DB::table('users')->min('id'), \DB::table('users')->max('id'));
      $post_id = random_int(\DB::table('posts')->min('id'), \DB::table('posts')->max('id'));
+     $comment_id = random_int(\DB::table('comments')->min('id'), \DB::table('comments')->max('id'));
      $notification_type = \Faker\Factory::create()->randomElement(['like', 'comment']);
      $username = \DB::table('users')->where('id', $user_id)->value('name');
      $notification_text = \Faker\Factory::create()->realText($maxNbChars = 20);
@@ -32,6 +33,7 @@ class NotificationFactory extends Factory
         return [
             "user_id" => $user_id,
             "post_id" => $post_id,
+            "comment_id" => $comment_id,
             "notification_type" => $notification_type,
             "notification_text" => $notification_text,
             "notification_time" => $notification_time,

@@ -23,5 +23,15 @@ class Comment extends Model
     {
         return $this->belongsTo(Member::class);
     }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class);
+    }
 }
 
