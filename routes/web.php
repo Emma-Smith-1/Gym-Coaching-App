@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Mail\shit;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/posts', [PostController::class, 'index']);
+
+Route::get('/post/{post_num?}', function($post_num = null) {
+    return view('post', ['post_num'=> $post_num]);
+});
 
 Route::get('/', function () {
     return view('welcome');
