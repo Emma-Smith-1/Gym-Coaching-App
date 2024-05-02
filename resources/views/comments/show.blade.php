@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Comment contents')
+@section('id', 'Comment contents')
 
 @section('content')
     <ul>
+        <li>ID: {{ $comment->id }}</li>
         <li>Comment: {{ $comment->content }}</li>
-        <li>Creation date: {{ $comment->creation_date }}</li>
-        <li>Last updated: {{ $comment->last_updated }}</li>
+        <li>Creation date: {{ $comment->created_at }}</li>
+        <li>Last updated: {{ $comment->updated_at}}</li>
         <li>Visibility: {{ $comment->Visibility }}</li>
         <li>Likes: {{ $comment->likes }}</li>
     </ul>
