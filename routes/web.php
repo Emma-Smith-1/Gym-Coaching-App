@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ReplyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/comments', [CommentController::class, 'index']);
-Route::get('/commments/{id}', [CommentController::class, 'show']);
+Route::get('/posts/{post}/comments', [CommentController::class, 'index'])
+    ->name('posts.comments.index');
+
+Route::get('/posts/{post}/comments/replies', [ReplyController::class, 'index'])
+    ->name('posts.comments.reples.index');
+
+Route::get('/posts/commments/{id}', [CommentController::class, 'show']);
 
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
