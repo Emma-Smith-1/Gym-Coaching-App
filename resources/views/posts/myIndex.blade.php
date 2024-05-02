@@ -16,7 +16,7 @@
                         <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg"> <!-- Changed background color -->
                             <div class="p-6 text-gray-900 dark:text-gray-100">
                                 <div class="text-right text-sm text-gray-500 dark:text-gray-400 mb-2">Category: {{ $post->category }}</div>
-                                <div class="text-right text-sm text-gray-500 dark:text-gray-400 mb-2">Posted by: </div>
+                                <div class="text-right text-sm text-gray-500 dark:text-gray-400 mb-2">Posted by: {{ $post->coach_id }}</div>
                                 <li><a href="/posts/{{ $post->id }}" class="font-bold text-lg">{{ $post->title }}</a></li> <!-- Increased font size -->
                                 <ul>
                                     <li><a href="{{ route('posts.comments.index', ['post' => $post->id]) }}" class="text-red-500">View Comments</a></li>
