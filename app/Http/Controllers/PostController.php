@@ -53,11 +53,11 @@ class PostController extends Controller
             'comments' => 'nullable|integer',
             'media' => 'required|string|max:255',
             'status' => 'required|string|max:10',
-            'coach_id' => 'required| integer',
         ]);
 
         $likes = $request->has('likes') ? $request->likes : 0;
         $comments = $request->has('comments') ? $request->comments : 0;
+        
 
         $post = new Post();
         $post->title = $validatedData['title'];
@@ -68,7 +68,7 @@ class PostController extends Controller
         $post->comments = $comments;
         $post->media = $validatedData['media'];
         $post->status = $validatedData['status'];
-        $post->coach_id = $validatedData['coach_id'];
+        $post->coach_id = Auth::id();
 
         $post->save();
 

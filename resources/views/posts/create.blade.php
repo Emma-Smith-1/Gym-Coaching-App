@@ -18,39 +18,37 @@
 
                         @csrf
 
-                        <p>Title: <input type="text" name="title" ></p>
-                        <p>Content: <input type="text" name="content" ></p>
-                        <p>
-                            Category:
-                                <select name="category">
-                                <option value="General">General</option>
-                                <option value="Arm Workouts">Arm Workouts</option>
-                                <option value="Leg Workouts">Leg Workouts</option>
-                                <option value="HIIT">HIIT</option>
-                            </select>
-                        </p>
+                        <p>Title: <input type="text" name="title" class="w-full px-3 py-2 border rounded-lg text-gray-900 border-gray-300 focus:outline-none focus:border-blue-500"></p>
+                        <p>Content: <textarea name="content" class="w-full px-3 py-2 border rounded-lg text-gray-900 border-gray-300 focus:outline-none focus:border-blue-500" rows="5"></textarea></p>
+                        <p>Media: <input type="text" name="media" class="w-full px-3 py-2 border rounded-lg text-gray-900 border-gray-300 focus:outline-none focus:border-blue-500"></p>
 
-                        <p>
-                            Visibility:
-                            <select name="visibility">
-                                <option value="public">Public</option>
-                                <option value="private">Private</option>
-                                <option value="draft">Draft</option>
-                            </select>
-                        </p>
-
-
-                        <p>Media: <input type="text" name="media"></p>
-                        <p>
-                            Status:
-                            <select name="status">
-                                <option value="pending">Pending</option>
-                                <option value="approved">Approved</option>
-                                <option value="rejected">Rejected</option>
-                            </select>
-                        </p>
-                        <p>Coach ID: <input type="text" name="coach_id"></p>
-
+                        <div class="flex flex-wrap">
+                            <p>
+                                Status:
+                                <select name="status" class="w-full px-3 py-2 border rounded-lg text-gray-900 border-gray-300 focus:outline-none focus:border-blue-500">
+                                    <option value="pending">Pending</option>
+                                    <option value="approved">Approved</option>
+                                    <option value="rejected">Rejected</option>
+                                </select>
+                            </p>
+                            <p>
+                                Visibility:
+                                <select name="visibility" class="w-full px-3 py-2 border rounded-lg text-gray-900 border-gray-300 focus:outline-none focus:border-blue-500">
+                                    <option value="public">Public</option>
+                                    <option value="private">Private</option>
+                                    <option value="draft">Draft</option>
+                                </select>
+                            </p>
+                            <p>
+                                Category:
+                                    <select name="category" class="w-full px-3 py-2 border rounded-lg text-gray-900 border-gray-300 focus:outline-none focus:border-blue-500">
+                                    <option value="General">General</option>
+                                    <option value="Arm Workouts">Arm Workouts</option>
+                                    <option value="Leg Workouts">Leg Workouts</option>
+                                    <option value="HIIT">HIIT</option>
+                                </select>
+                            </p>
+                        </div>
                         <div class="flex flex-wrap">
                             <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4"> <!-- Changed background color -->
                                 <div class="p-6 text-gray-900 dark:text-gray-100">
