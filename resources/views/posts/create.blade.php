@@ -39,10 +39,16 @@
                             </select>
                         </p>
 
-                        <p>Likes: <input type="number" name="likes" value="0"></p>
-                        <p>Comments: <input type="number" name="comments" value="0"></p>
+
                         <p>Media: <input type="text" name="media"></p>
-                        <p>Status: <input type="text" name="status"></p>
+                        <p>
+                            Status:
+                            <select name="status">
+                                <option value="pending">Pending</option>
+                                <option value="approved">Approved</option>
+                                <option value="rejected">Rejected</option>
+                            </select>
+                        </p>
                         <p>Coach ID: <input type="text" name="coach_id"></p>
 
                         <div class="flex flex-wrap">

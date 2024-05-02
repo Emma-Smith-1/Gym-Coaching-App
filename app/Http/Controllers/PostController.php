@@ -44,7 +44,35 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request['title']);
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required|string|max:255',
+            'category' => 'required|string|max:255',
+            'visibility' => 'required|string|max:255',
+            'likes' => 'nullable|integer',
+            'comments' => 'nullable|integer',
+            'media' => 'required|string|max:255',
+            'status' => 'required|string|max:10',
+            'coach_id' => 'required| integer',
+        ]);
+
+        $likes = $request->has('likes') ? $request->likes : 0;
+        $comments = $request->has('comments') ? $request->comments : 0;
+
+        $post = new Post();
+        $post->title = $validatedData['title'];
+        $post->content = $validatedData['content'];
+        $post->category = $validatedData['category'];
+        $post->visibility = $validatedData['visibility'];
+        $post->likes = $likes;
+        $post->comments = $comments;
+        $post->media = $validatedData['media'];
+        $post->status = $validatedData['status'];
+        $post->coach_id = $validatedData['coach_id'];
+
+        $post->save();
+
+        return redirect()->route('posts')->with('success', 'Post created successfully.');
     }
 
     /**
