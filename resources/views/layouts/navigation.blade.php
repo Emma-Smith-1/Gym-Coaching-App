@@ -10,6 +10,11 @@
                     </a>
                 </div>
 
+                <!-- App Title -->
+                <div class="shrink-0 flex items-center">
+                    <span class="mt-1 font-semibold text-gray-900 dark:text-white"> Gym Coaching App</span>
+                </div>
+
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
