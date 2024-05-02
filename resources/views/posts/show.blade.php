@@ -13,6 +13,6 @@
         <li>Likes: {{ $post->likes }}</li>
         <li>Comments: {{ $post->comments }}</li>
         <li>Media: {{ $post->media }}</li>
-        <li>Status: {{ $post->status}}</li>
+        <li>Status: {{ $post->status }}</li>
     </ul>
 @endsection

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('user', 'Comment contents')
+@section('title', 'Comment contents')
 
 @section('content')
     <ul>

@@ -8,7 +8,7 @@
     <ul>
         @foreach ($comments as $comment)
 
-            <li><a href="/comments/{{ $comment->id }}">{{ $comment->content }}</li>
+            <li><a href="/comments/{{ $comment->id }}">{{ $comment->id }}</li>
 
         @endforeach
     
