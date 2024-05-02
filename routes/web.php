@@ -20,9 +20,8 @@ use App\Mail\shit;
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
 
-Route::get('/post/{post_num?}', function($post_num = null) {
-    return view('post', ['post_num'=> $post_num]);
-});
+Route::get('/comments', [CommentController::class, 'index']);
+Route::get('/commments/{id}', [CommentController::class, 'show']);
 
 Route::get('/', function () {
     return view('welcome');
