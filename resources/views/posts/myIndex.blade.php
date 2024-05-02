@@ -27,7 +27,9 @@
                 </div>
             @endforeach
         @else
-            <li>No posts found.</li>
+            <div class="flex justify-center items-center h-full">
+                <p class="text-gray-500 dark:text-gray-400">No posts found.</p>
+            </div>
         @endif
     </ul>
 @endsection

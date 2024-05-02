@@ -23,7 +23,9 @@
                 </div>
             @endforeach
         @else 
-            <li>No comments found.</li>
+            <div class="flex justify-center items-center h-full">
+                <p class="text-gray-500 dark:text-gray-400">No comments found.</p>
+            </div>
         @endif
     </ul>
 

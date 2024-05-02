@@ -8,6 +8,7 @@
             {{ __('All Posts') }}
         </h2>
     </h1>
+    <a href="{{ route('posts.create' )}}" class="flex items-center justify-center">Create Post</a>
     <ul>
         @foreach ($posts as $post)
             <div class="py-4"> <!-- Increased padding for bigger posts -->
@@ -26,4 +27,6 @@
             </div>
         @endforeach
     </ul>
+
+
 @endsection
