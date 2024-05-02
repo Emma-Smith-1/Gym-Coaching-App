@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class PostController extends Controller
@@ -15,6 +16,16 @@ class PostController extends Controller
     {
         $posts = Post::all();
         return view('posts.index', ['posts' => $posts]);
+    }
+
+    /**
+     * Display only the user's posts
+     */
+    public function myIndex()
+    {
+        $user = Auth::user();
+        $posts = $user->posts;
+        return view('posts.myIndex', ['posts' => $posts]);
     }
 
     /**

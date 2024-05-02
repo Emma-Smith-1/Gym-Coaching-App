@@ -25,8 +25,16 @@ Route::get('/posts/{post}/comments/replies', [ReplyController::class, 'index'])
 
 Route::get('/posts/commments/{id}', [CommentController::class, 'show']);
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index'])
+    ->name('posts');
+
 Route::get('/posts/{id}', [PostController::class, 'show']);
+
+Route::get('/my_posts', [PostController::class, 'myIndex'])
+    ->name('my_posts');
+
+Route::get('/my_comments', [CommentController::class, 'myIndex'])
+    ->name('my_comments');
 
 Route::get('/', function () {
     return view('welcome');

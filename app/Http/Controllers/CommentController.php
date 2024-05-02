@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class CommentController extends Controller
@@ -15,6 +16,16 @@ class CommentController extends Controller
     {
         $comments = Comment::all();
         return view('comments.index', ['comments' => $comments]);
+    }
+
+    /**
+     * Display only the user's comments
+     */
+    public function myIndex()
+    {
+        $user = Auth::user();
+        $comments = $user->comments;
+        return view('comments.myIndex', ['comments' => $comments]);
     }
 
     /**
