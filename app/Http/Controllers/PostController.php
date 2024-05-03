@@ -84,6 +84,13 @@ class PostController extends Controller
         return view('posts.show', ['post' => $post]);
     }
 
+    public function like(Post $post)
+    {
+        $post->like();
+
+        return redirect()->back();
+    }
+
     /**
      * Show the form for editing the specified resource.
      */
@@ -108,10 +115,5 @@ class PostController extends Controller
         //
     }
 
-    public function like(Post $post)
-    {
-        $post->like();
 
-        return redirect()->back();
-    }
 }
