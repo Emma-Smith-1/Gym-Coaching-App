@@ -4,6 +4,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ReplyController;
+use App\Http\Controllers\CoachController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/my_posts', [PostController::class, 'myIndex'])
+    ->name('my_posts');
+
+Route::get('/coaches', [CoachController::class, 'index'])
+    ->name('coaches');
+
+Route::get('/my_coaches', [CoachController::class, 'myIndex'])
+    ->name('my_coaches');
+
+Route::get('/coaches/{id}', [CoachController::class, 'show']);
+
 
 Route::get('/posts/{post}/comments', [CommentController::class, 'index'])
     ->name('posts.comments.index');
@@ -35,9 +48,6 @@ Route::post('/posts', [PostController::class, 'store'])
     ->name('posts.store');
 
 Route::get('/posts/{id}', [PostController::class, 'show']);
-
-Route::get('/my_posts', [PostController::class, 'myIndex'])
-    ->name('my_posts');
 
 Route::get('/my_comments', [CommentController::class, 'myIndex'])
     ->name('my_comments');
