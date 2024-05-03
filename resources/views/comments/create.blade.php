@@ -10,9 +10,9 @@
         </h2>
     </h1>
 
-    <div class="py-4"> <!-- Increased padding for bigger posts -->
+    <div class="py-4"> 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg"> <!-- Changed background color -->
+            <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100 flex items-center justify-center">
                     <form method="POST" action="{{ route('posts.comments.store', ['post' => $post->id]) }}">
 
@@ -23,13 +23,13 @@
                         <p>Media: <input type="text" name="media" class="w-full px-3 py-2 border rounded-lg text-gray-900 border-gray-300 focus:outline-none focus:border-blue-500"></p>
                         </div>
                         <div class="flex flex-wrap">
-                            <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4"> <!-- Changed background color -->
+                            <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4"> 
                                 <div class="p-6 text-gray-900 dark:text-gray-100">
                                     <input type="submit" value="Submit">
                                 </div>
                             </div>
 
-                            <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4"> <!-- Changed background color -->
+                            <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4"> 
                                 <div class="p-6 text-gray-900 dark:text-gray-100">
                                     <a href="{{ route('comments') }}">Cancel</a>
                                 </div>

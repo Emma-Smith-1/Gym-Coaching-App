@@ -50,7 +50,10 @@ Route::get('/posts/{post_id}/comments', [CommentController::class, 'commentsInde
 Route::get('/posts/{post}/comments/replies', [ReplyController::class, 'index'])
     ->name('posts.comments.reples.index');
 
-Route::get('/posts/{post}/comments/create', [CommentController::class, 'create'])
+Route::get('/posts/{post_id}/comments/create', [CommentController::class, 'create'])
+    ->name('comments.create');
+
+Route::get('/posts/comments/create', [CommentController::class, 'create'])
     ->name('comments.create');
 
 Route::post('/posts/{post}/comments', [CommentController::class, 'store'])

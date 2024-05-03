@@ -23,7 +23,7 @@ class PostFactory extends Factory
         $category = \Faker\Factory::create()->randomElement(["General", "Arm Workouts", "Leg Workouts", "HIIT"]);
         $visibility = \Faker\Factory::create()->randomElement(["public", "draft", "private"]);
         $likes = random_int(0, \DB::table('users')->max('id'));
-        $comments = random_int(0, 50);
+        $comments = random_int(0, 9);
         $media = \Faker\Factory::create()->imageUrl();
         $status = \Faker\Factory::create()->randomElement(["pending", "approved", "rejected"]);
         $user_id = random_int(\DB::table('coaches')->min('id'), \DB::table('coaches')->max('id'));

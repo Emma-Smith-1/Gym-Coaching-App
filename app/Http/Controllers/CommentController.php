@@ -38,10 +38,10 @@ class CommentController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create($postId)
+    public function create()
     {
-        $post = Post::findOrFail($postId);
-        return view('comments.create', compact('post'));
+        //$post = Post::findOrFail($postId);
+        return view('comments.create');
     }
 
     /**
