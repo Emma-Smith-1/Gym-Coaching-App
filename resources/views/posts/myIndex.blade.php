@@ -19,7 +19,7 @@
                                 <div class="text-right text-sm text-gray-500 dark:text-gray-400 mb-2">Posted by: {{ $post->coach_id }}</div>
                                 <li><a href="/posts/{{ $post->id }}" class="font-bold text-lg">{{ $post->title }}</a></li> <!-- Increased font size -->
                                 <ul>
-                                    <li><a href="{{ route('posts.comments.index', ['post' => $post->id]) }}" class="text-red-500">View Comments</a></li>
+                                    <li><a href="{{ route('posts.comments.index', ['post_id' => $post->id]) }}" class="text-red-500">View Comments</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -40,7 +40,7 @@
                     </div>
                     <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4 mr-2"> <!-- Changed background color -->
                         <div class="p-6 text-gray-900 dark:text-gray-100">
-                            <li><a href="{{ route('posts.comments.index', ['post' => $post->id]) }}" >View Comments ({{ $post->comments }})</a></li>
+                            <li><a href="{{ route('posts.comments.index', ['post_id' => $post->id]) }}" >View Comments ({{ $post->comments }})</a></li>
                         </div>
                     </div>
                     <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4 mr-2"> <!-- Changed background color -->

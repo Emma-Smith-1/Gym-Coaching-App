@@ -31,7 +31,7 @@
                                     <button type="submit">{{ $post->likes }} Likes</button>
                                 </form>
                             <ul>
-                                <li><a href="{{ route('posts.comments.index', ['post' => $post->id]) }}" class="text-red-500">View Comments ({{ $post->comments }})</a></li>
+                                <li><a href="{{ route('posts.comments.index', ['post_id' => $post->id]) }}" class="text-red-500">View Comments ({{ $post->comments }})</a></li>
                             </ul>
                             </div>
                         </div>
