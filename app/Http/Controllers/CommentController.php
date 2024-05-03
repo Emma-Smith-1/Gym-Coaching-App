@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,17 +32,37 @@ class CommentController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($postId)
     {
-        //
+        $post = Post::findOrFail($postId);
+        return view('comments.create', compact('post'));
     }
 
     /**
      * Store a newly created resource in storage.
+     * 
+     * @param \Illuminate\Http\Request
+     * 
+     * @return \Illuminate\Http\Response
+     * 
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'content' => 'required|string|max:255',
+            'visibility' => 'required|string|max:255',
+            'likes' => 'nullable|integer',
+        ]);
+
+        $likes = $request->has('likes') ? $request->likes : 0;
+
+        $comment = new Comment();
+        $comment->content = $validatedData['content'];
+        $comment->visibility = $validatedData['visibility'];
+        $comment->likes = $likes;
+        $comment->save();
+
+        return redirect()->route('comments')->with('success', 'Comment created successfully.');
     }
 
     /**

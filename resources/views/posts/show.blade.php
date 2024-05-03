@@ -29,9 +29,14 @@
                             <li>View Likes ({{ $post->likes }})</li>
                         </div>
                     </div>
-                    <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4"> <!-- Changed background color -->
+                    <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4 mr-2"> <!-- Changed background color -->
                         <div class="p-6 text-gray-900 dark:text-gray-100">
                             <li><a href="{{ route('posts.comments.index', ['post' => $post->id]) }}" >View Comments ({{ $post->comments }})</a></li>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4 mr-2"> <!-- Changed background color -->
+                        <div class="p-6 text-gray-900 dark:text-gray-100">
+                            <li><a href="/posts/{ $post->post_id }/comments/create" class="font-bold text-lg">Add Comment</a></li>
                         </div>
                     </div>
                 </div>

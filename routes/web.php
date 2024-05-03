@@ -36,12 +36,16 @@ Route::get('/posts/{post}/comments', [CommentController::class, 'index'])
 Route::get('/posts/{post}/comments/replies', [ReplyController::class, 'index'])
     ->name('posts.comments.reples.index');
 
-Route::get('/posts/commments/{id}', [CommentController::class, 'show']);
+Route::get('/posts/{post}/comments/create', [CommentController::class, 'create'])
+    ->name('comments.create');
+
+Route::post('/posts/{post}/comments', [CommentController::class, 'store'])
+    ->name('posts.comments.store');
 
 Route::get('/posts', [PostController::class, 'index'])
     ->name('posts');
 
-    Route::get('/posts/create', [PostController::class, 'create'])
+Route::get('/posts/create', [PostController::class, 'create'])
     ->name('posts.create');
 
 Route::post('/posts', [PostController::class, 'store'])
