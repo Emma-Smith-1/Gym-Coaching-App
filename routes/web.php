@@ -29,6 +29,7 @@ Route::get('/my_coaches', [CoachController::class, 'myIndex'])
 
 Route::get('/coaches/{id}', [CoachController::class, 'show']);
 
+Route::post('/posts/{post}/like', [PostController::class, 'like'])->name('posts.like');
 
 Route::get('/posts/{post}/comments', [CommentController::class, 'index'])
     ->name('posts.comments.index');

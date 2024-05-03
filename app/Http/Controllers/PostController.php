@@ -107,4 +107,11 @@ class PostController extends Controller
     {
         //
     }
+
+    public function like(Post $post)
+    {
+        $post->like();
+
+        return redirect()->back();
+    }
 }

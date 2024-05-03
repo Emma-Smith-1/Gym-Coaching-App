@@ -26,7 +26,16 @@
                 <div class="flex flex-wrap"> <!-- Added flex container -->
                     <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4 mr-2"> <!-- Changed background color -->
                         <div class="p-6 text-gray-900 dark:text-gray-100">
-                            <li>View Likes ({{ $post->likes }})</li>
+                            <li>{{ $post->likes }} Likes </li>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4 mr-2"> <!-- Changed background color -->
+                        <div class="p-6 text-gray-900 dark:text-gray-100">
+                        <form method="POST" action="{{ route('posts.like', ['post' => $post]) }}">
+                            @csrf
+                            @method('POST')
+                            <button type="submit">Like</button>
+                            </form>
                         </div>
                     </div>
                     <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4 mr-2"> <!-- Changed background color -->
