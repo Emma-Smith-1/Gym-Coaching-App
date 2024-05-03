@@ -5,7 +5,7 @@
 @section('content')
     <ul>
         <div class="py-4"> <!-- Increased padding for bigger posts -->
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="p-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg mb-4"> <!-- Changed background color -->
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         <div class="text-right text-sm text-gray-500 dark:text-gray-400 mb-2">Category: {{ $post->category }}</div>

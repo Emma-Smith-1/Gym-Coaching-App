@@ -4,7 +4,7 @@
 
 @section('content')
     <h1 name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 flex items-center justify-center">
+        <h2 class="p-6 font-semibold text-xl text-gray-800 dark:text-gray-200 flex items-center justify-center">
             {{ __('My Posts') }}
         </h2>
     </h1>

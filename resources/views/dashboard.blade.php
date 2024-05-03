@@ -5,7 +5,7 @@
 
 @section('content')
     <h1 name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="p-6 font-semibold text-xl text-gray-800 dark:text-gray-200 flex items-center justify-center">
             {{ __( ' Dashboard' ) }}
         </h2>
     </h1>
@@ -16,6 +16,9 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
+            <h2 class="p-6 font-semibold text-xl text-gray-800 dark:text-gray-200 flex items-center justify-center">
+                {{ __( 'Recent posts' ) }}
+            </h2>
         </div>
     </div>
 @endsection
