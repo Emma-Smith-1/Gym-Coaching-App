@@ -44,6 +44,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string|max:255',
@@ -57,7 +58,6 @@ class PostController extends Controller
 
         $likes = $request->has('likes') ? $request->likes : 0;
         $comments = $request->has('comments') ? $request->comments : 0;
-        
 
         $post = new Post();
         $post->title = $validatedData['title'];
@@ -68,7 +68,7 @@ class PostController extends Controller
         $post->comments = $comments;
         $post->media = $validatedData['media'];
         $post->status = $validatedData['status'];
-        $post->coach_id = Auth::id();
+        $post->user_id = Auth::id();
 
         $post->save();
 

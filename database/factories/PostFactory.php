@@ -26,7 +26,7 @@ class PostFactory extends Factory
         $comments = random_int(0, 50);
         $media = \Faker\Factory::create()->imageUrl();
         $status = \Faker\Factory::create()->randomElement(["pending", "approved", "rejected"]);
-        $coach_id = random_int(\DB::table('coaches')->min('id'), \DB::table('coaches')->max('id'));
+        $user_id = random_int(\DB::table('coaches')->min('id'), \DB::table('coaches')->max('id'));
 
         return [
             "title" => $title,
@@ -39,7 +39,7 @@ class PostFactory extends Factory
             "comments" => $comments,
             "media" => $media,
             "status" => $status,
-            "coach_id" => $coach_id,
+            "user_id" => $user_id,
         ];
     }
 }

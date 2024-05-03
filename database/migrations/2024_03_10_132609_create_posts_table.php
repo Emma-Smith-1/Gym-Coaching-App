@@ -23,9 +23,9 @@ return new class extends Migration
             $table->unsignedInteger('comments')->default(0);
             $table->string('media')->nullable();
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
-            $table->bigInteger('coach_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
 
-            $table->foreign('coach_id')->references('id')->on('coaches')
+            $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
