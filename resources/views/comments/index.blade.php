@@ -17,7 +17,7 @@
                             <div class="bg-gray-100 dark:bg-gray-700 overflow-hidden shadow-sm sm:rounded-lg"> <!-- Changed background color -->
                                 <div class="p-6 text-gray-900 dark:text-gray-100">
                                 <div class="text-right text-sm text-gray-500 dark:text-gray-400 mb-2">Posted by: {{ $comment->user_id }}</div>
-                                    <li><a href="/comments/{{ $comment->id }}">{{ $comment->content }}</li>
+                                    <li><a href="">{{ $comment->content }}</li>
                                 </div>
                             </div>
                         </div>

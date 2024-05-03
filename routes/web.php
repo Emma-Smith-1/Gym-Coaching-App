@@ -27,7 +27,7 @@ Route::get('/posts/create', [PostController::class, 'create'])
 
 Route::post('/posts', [PostController::class, 'store'])
     ->name('posts.store');
-    
+
 Route::get('/profile', [ProfileController::class, 'show'])
     ->name('profile.show');
 
@@ -44,7 +44,7 @@ Route::get('/coaches/{id}', [CoachController::class, 'show']);
 
 Route::post('/posts/{post}/like', [PostController::class, 'like'])->name('posts.like');
 
-Route::get('/posts/{post}/comments', [CommentController::class, 'index'])
+Route::get('/posts/{post_id}/comments', [CommentController::class, 'commentsIndex'])
     ->name('posts.comments.index');
 
 Route::get('/posts/{post}/comments/replies', [ReplyController::class, 'index'])

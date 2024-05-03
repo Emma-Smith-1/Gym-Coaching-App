@@ -19,6 +19,12 @@ class CommentController extends Controller
         return view('comments.index', ['comments' => $comments]);
     }
 
+    public function commentsIndex($postId)
+    {
+        $comments = Comment::where('post_id', $postId)->get();
+        return view('comments.index', ['comments' => $comments, 'post_id' => $postId]);
+    }
+
     /**
      * Display only the user's comments
      */

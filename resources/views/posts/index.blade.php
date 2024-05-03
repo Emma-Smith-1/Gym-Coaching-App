@@ -6,7 +6,6 @@
     <h1 name="header" class="p-6 font-semibold text-xl text-gray-800 dark:text-gray-200 flex items-center justify-center">
         {{ __('All Posts') }}
     </h1>
-    <a href="{{ route('posts.create') }}" class="flex items-center justify-center mb-4">Create Post</a>
 
     <ul>
         @foreach ($posts as $post)
