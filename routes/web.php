@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CommentController;
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/profile', [ProfileController::class, 'show'])
+    ->name('profile.show');
 
 Route::get('/my_posts', [PostController::class, 'myIndex'])
     ->name('my_posts');
@@ -62,7 +65,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $recentPosts = Post::orderBy('created_at', 'desc')->take(3)->get();
+    return view('dashboard', compact('recentPosts'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
